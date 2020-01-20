@@ -1,9 +1,8 @@
-# Next JS Starter
+# TODO WEB
 
-- Next@9.2
-- Styled-Components@5
-- Typscript
-- Context API
-- Husky
-- Eslint
-- Prettier
+## 시작하기
+
+```
+$ npm run build
+$ npm start
+```
