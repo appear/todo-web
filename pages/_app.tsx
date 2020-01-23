@@ -2,6 +2,8 @@ import React from 'react'
 import { AppContext, AppProps } from 'next/app'
 import Head from 'next/head'
 
+import { ThemeProvider } from '../src/design-system'
+
 interface MyAppProps extends AppProps {
   pageProps: any
 }
@@ -16,13 +18,14 @@ function MyApp({ pageProps, Component }: MyAppProps) {
           name="viewport"
           content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
         />
-        <meta name="description" content="Next JS - Starter Kit" />
-        <meta property="og:title" content="Next JS - Starter Kit" />
-        <meta property="og:description" content="Next JS - Starter Kit" />
-        <title>Next JS - Starter Kit</title>
+        <meta name="description" content="Todo Web" />
+        <meta property="og:title" content="Todo Web" />
+        <meta property="og:description" content="Todo Web" />
+        <title>Todo Web</title>
       </Head>
-
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
