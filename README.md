@@ -1,14 +1,17 @@
-# Next JS Starter
+# TODO-WEB
 
-- Next@9.2
-- Styled-Components@5
-- Typscript
-- Context API
-- Husky
-- Eslint
-- Prettier
+## Work Convention
 
-## 폴더 구조
+- branch 전략은 [Github Flow](https://guides.github.com/introduction/flow/) 를 이용합니다.
+  - 해당 featrue 에 따른 issue 를 등록하여 작업을 합니다.
+  - 한 commit 에는 되도록 하나의 작업만 담습니다.
+  - rebase 를 하는것을 지향합니다.
+- [commit convention](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
+  - husky 를 이용하여 commit 을 검증합니다.
+
+<br />
+
+## Folder Structure
 
 ```text
 .
@@ -29,20 +32,24 @@
 +-- .tsconfig: typescript 설정
 ```
 
-## 테마
+<br />
+
+## Theme
 
 Styled-Component 의 Theme Provider 를 이용하여 theme set 을 주입받습니다.
 
 테마는 아래와 같은 모양을 가집니다.
 
-#### 테마 구조
+<br />
+
+#### Structure
 
 ```js
 fontSize: {},
 colors: {},
 ```
 
-#### 사용 예제
+#### How to use ?
 
 ```js
 /* 
@@ -66,4 +73,20 @@ const Container = steyld.div`
      background-color: ${theme.colors[bg]};
    `}
 `
+```
+
+<br />
+
+## Code Convention
+
+eslint (ts-lint) 와 prettier 를 사용합니다.
+rule set 은 기본적으로 recommended 를 확장하여 사용합니다
+
+vscode 의 경우 아래의 설정이 추가적으로 필요합니다.
+
+```text
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+"editor.formatOnSave": true,
 ```
