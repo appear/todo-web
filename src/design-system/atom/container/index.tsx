@@ -3,7 +3,7 @@ import {
   marginMixin,
   paddingMixin,
   formatMarginPadding,
-} from '../mixins/margin-padding'
+} from '../../mixins/margin-padding'
 
 interface ContainerProps {
   display?: string
@@ -11,7 +11,7 @@ interface ContainerProps {
   bg?: string
 }
 
-const Container = styled.div<ContainerProps>`
+export const Container = styled.div<ContainerProps>`
   ${marginMixin}
   ${paddingMixin}
 
@@ -31,5 +31,3 @@ const Container = styled.div<ContainerProps>`
       background-color: ${theme.colors[bg]};
     `}  
 `
-
-export default Container

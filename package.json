@@ -1,14 +1,16 @@
 {
-  "name": "nextjs-starter",
+  "name": "todo-web",
   "version": "1.0.0",
-  "description": "- Next@9 - Styled-Components@4 - Typscript  - Context API",
+  "description": "Todo Web",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write \"**/*.{js,json,ts,tsx}\"",
-    "lint": "eslint '**/*.{js,ts,tsx}'"
+    "lint": "eslint '**/*.{js,ts,tsx}'",
+    "docs": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -47,7 +49,15 @@
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "@storybook/addon-docs": "^5.3.8",
+    "babel-preset-react-app": "^9.1.0",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-knobs": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/react": "^5.3.8"
   },
   "husky": {
     "hooks": {
